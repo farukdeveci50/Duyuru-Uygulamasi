@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.halo.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_genelGirisFragment"
+            app:destination="@id/genelGirisFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.halo.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_kullaniciOlusturFragment"
+            app:destination="@id/kullaniciOlusturFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/ITFragment"
+        android:name="com.example.halo.ITFragment"
+        android:label="fragment_i_t"
+        tools:layout="@layout/fragment_i_t" >
+        <action
+            android:id="@+id/action_ITFragment_to_detayFragment"
+            app:destination="@id/detayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciOlusturFragment"
+        android:name="com.example.halo.KullaniciOlusturFragment"
+        android:label="fragment_kullanici_olustur"
+        tools:layout="@layout/fragment_kullanici_olustur" />
+    <fragment
+        android:id="@+id/genelGirisFragment"
+        android:name="com.example.halo.GenelGirisFragment"
+        android:label="fragment_genel_giris"
+        tools:layout="@layout/fragment_genel_giris" >
+        <action
+            android:id="@+id/action_genelGirisFragment_to_ITFragment"
+            app:destination="@id/ITFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_genelGirisFragment_to_adminFragment"
+            app:destination="@id/adminFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_genelGirisFragment_to_insanKaynaklariFragment"
+            app:destination="@id/insanKaynaklariFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_genelGirisFragment_to_muhasebeFragment"
+            app:destination="@id/muhasebeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/insanKaynaklariFragment"
+        android:name="com.example.halo.InsanKaynaklariFragment"
+        android:label="fragment_insan_kaynaklari"
+        tools:layout="@layout/fragment_insan_kaynaklari" >
+        <action
+            android:id="@+id/action_insanKaynaklariFragment_to_detayFragment"
+            app:destination="@id/detayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/muhasebeFragment"
+        android:name="com.example.halo.MuhasebeFragment"
+        android:label="fragment_muhasebe"
+        tools:layout="@layout/fragment_muhasebe" >
+        <action
+            android:id="@+id/action_muhasebeFragment_to_detayFragment"
+            app:destination="@id/detayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.halo.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="duyurum"
+            app:argType="com.example.halo.Duyuru" />
+    </fragment>
+</navigation>
